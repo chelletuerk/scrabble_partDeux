@@ -3,7 +3,7 @@ import  scoreWord  from './helpers/scoreWord';
 require('../style.scss')
 
 class Org extends Component {
-  render() {
+   render() {
     return (
       <div>
         Oh Hey
@@ -11,4 +11,6 @@ class Org extends Component {
     )
   }
 }
+
+
 export default Org;

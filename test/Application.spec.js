@@ -18,20 +18,25 @@ describe ('scoreWord', () => {
     assert.isFunction(scoreWord);
   });
 
-  it('scores an empty word as zero', (text) => {
-    assert.equal(scoreWord('')).toEqual(0);
+  it('scores an empty word as zero', () => {
+    const text = scoreWord('')
+    assert.equal(text, 0);
   });
 
   it('scores a letter', () => {
-    assert.equal(scoreWord('a')).toEqual(1);
+    const score = scoreWord('suh')
+    assert.equal(score, 6);
   });
 
   it('scores words with spaces', () => {
-    assert.equal(scoreWord('righteous bro')).toEqual(18);
+    const score = scoreWord('      righteousbro        ')
+    assert.equal(score,18);
   });
 
   it('scores case insensitive words', () => {
-    assert.equal(scoreWord('SUH')).toEqual(6);
+    const score = scoreWord('FAM')
+    assert.equal(score, 8)
+
   });
 
 });
